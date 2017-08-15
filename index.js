@@ -7,7 +7,7 @@ function isNonRelevantRule(rule) {
 
 function hasIgnoredSelectors(selectors, ignoredSelectors) {
     return selectors.some(selector =>
-        ignoredSelectors.find(ignored => ignored === selector));
+        ignoredSelectors.find(ignored => selector.indexOf(ignored) > -1));
 }
 
 function isIgnoredRule(rule, ignoredSelectors) {
